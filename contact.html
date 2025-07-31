@@ -26,14 +26,14 @@
       .invalid-feedback {
         display: none;
       }
-      
       .hero-image {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                    url('./electrical-contractor-hero.jpg');
+              url('Lightbulb.jpeg');
         background-size: cover;
+        background-repeat: no-repeat;  /* ← Add this line */
         background-position: center;
         background-attachment: fixed;
-        min-height: 400px;
+        min-height: 600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -60,6 +60,7 @@
         margin-bottom: 2rem;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
       }
+      
       
       .contact-section {
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -125,6 +126,23 @@
           gap: 1rem;
         }
       }
+
+      @media (min-width: 768px) {
+        #submit {
+          width: auto !important;
+          padding: 0.75rem 2rem;
+          display: block;
+          margin: 1rem auto 0 auto;
+        }
+      }
+
+      /* Keep full-width on mobile */
+      @media (max-width: 767px) {
+        #submit {
+          width: 100%;
+          padding: 0.75rem 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -133,36 +151,27 @@
     <div id="navbar"></div>
 
     <!--Hero Section with Electrical Contractor Image-->
-    <section class="hero-image">
-      <div class="hero-content">
-        <h1 class="hero-title bi bi-lightning-charge">Professional Electrical Services</h1>
-        <p class="hero-subtitle">Trusted electrical contractors serving residential and commercial clients with quality workmanship and reliable service.</p>
-        <div class="trust-indicators">
-          <div class="trust-item">
-            <i class="bi bi-shield-check"></i>
-            <div class="text-white">Licensed & Bonded</div>
-          </div>
-          <div class="trust-item">
-            <i class="bi bi-clock"></i>
-            <div class="text-white">24/7 Emergency Service</div>
-          </div>
-          <div class="trust-item">
-            <i class="bi bi-award"></i>
-            <div class="text-white">Quality Guaranteed</div>
-          </div>
+    <section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="Lightbulb.jpeg" alt="Contact Us" 
+                     class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6 ps-lg-5 text-center text-lg-start">
+                <h1 class="fw-bold mb-4">Contact Us!</h1>
+                <h2 class="mb-4">Get a quote for your electrical project</h2>
+                <p class="fs-5">Ready to start your electrical project? Contact us today!</p>
+            </col-lg-6>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
     <!--Start Contact Form-->
     <div class="container my-5">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8">
           <div class="contact-section">
-            <div class="form-header">
-              <h2>Contact Martel Electric LLC</h2>
-              <p class="text-muted">Get a quote for your electrical project</p>
-            </div>
             
             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="mb-5" novalidate>
               <!-- Web3Forms Access Key -->
