@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+web3forms_access_key*.txt
+.env
+.env.*
+node_modules/

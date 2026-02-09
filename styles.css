@@ -1,0 +1,248 @@
+/* Enhanced feature icon centering for all device sizes */
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Ensures horizontal centering */
+}
+
+/* Remove most transform and transition effects from cards, but keep hover lift */
+.card,
+.hover-zoom {
+  transition: transform 0.3s ease !important;
+}
+
+.card:hover,
+.hover-zoom:hover {
+  transform: translateY(-5px) !important;
+}
+
+/* Remove other transform effects but keep card hover lift */
+.card-img-top,
+.card:hover .card-img-top {
+  transform: none !important;
+  transition: none !important;
+}
+
+.feature-icon,
+.card:hover .feature-icon {
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Override existing feature-icon styles for better mobile centering */
+.features-section .feature-icon {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Ensure the card body content is centered on all devices */
+.features-section .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+  .features-section .card {
+    text-align: center;
+  }
+
+  .features-section .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-section .feature-icon {
+    margin: 0 auto 1rem auto !important;
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .features-section .card-title,
+  .features-section .card-text {
+    text-align: center;
+  }
+
+  .banner-image {
+    height: 350px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2rem !important;
+  }
+
+  .banner-overlay .lead {
+    font-size: 1.1rem !important;
+  }
+
+  .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 577px) and (max-width: 768px) {
+  .features-section .feature-icon {
+    margin: 0 auto 1rem auto !important;
+  }
+}
+
+/* Mobile-specific styling for centering lists */
+@media (max-width: 767px) {
+  .mobile-center-list {
+    text-align: center;
+  }
+  .mobile-center-list ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.invalid-feedback {
+  display: none;
+}
+
+/* Banner Section Styles */
+.banner-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem 0;
+}
+
+.banner-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.banner-image {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.banner-overlay {
+  z-index: 2;
+}
+
+.overlay-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-header h2 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.professional-badge {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  color: #2c3e50;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.trust-item i {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .trust-indicators {
+    gap: 1rem;
+  }
+
+  .banner-image {
+    height: 400px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .banner-overlay .lead {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Desktop-specific banner adjustments */
+@media (min-width: 992px) {
+  .banner-section {
+    padding: 1.5rem 0; /* Reduced from 2rem */
+  }
+
+  .banner-container {
+    max-width: 85%; /* Limits container width to 85% of its parent */
+    margin: 0 auto; /* Centers the container */
+  }
+
+  .banner-image {
+    height: 600px; /* Reduced from 500px */
+  }
+}
+
+/* Ensure mobile styles remain unchanged */
+@media (max-width: 991px) {
+  .banner-container {
+    max-width: 100%;
+  }
+}
